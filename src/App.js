@@ -1,7 +1,7 @@
 import './App.css';
 import Logo from './components/Logo';
 import Form from './components/Form';
-import {PackingList} from './components/PackingList.js';
+import PackingList from './components/PackingList.js';
 import Stats from './components/Stats';
 
 import {useState} from 'react';
@@ -29,6 +29,11 @@ function App() {
     )
   }
 
+  function handleClearList() {
+    const confirmed = window.confirm("Are you sure you want to delete all the items?")
+    if(confirmed) setItems([])
+  }
+
   return (
     <div className='app'>
       <Logo />
@@ -36,7 +41,8 @@ function App() {
       <PackingList 
         items={items} 
         onDeleteItems={handleDeleteItem} 
-        onToggleItem={handleToggleItem} />
+        onToggleItem={handleToggleItem}
+        onClearList={handleClearList} />
       <Stats items={items}/>
     </div>
   );
