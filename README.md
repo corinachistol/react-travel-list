@@ -1,3 +1,6 @@
+![image](https://github.com/corinachistol/react-travel-list/assets/115491975/0d54122c-c61b-416a-b955-0dc011e1ece2)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
